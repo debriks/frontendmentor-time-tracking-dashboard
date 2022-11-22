@@ -171,7 +171,7 @@ buttons.forEach((button) => {
   });
 });
 
-buttons[0].click(); //JS clicks on this button for us
+buttons[1].click(); //JS clicks on this button for us
 
 // Big Thanks to Seer Studio for an amazing tutorial, if you want to check it out:
 // https://www.youtube.com/watch?v=l9Qw8y3LfCY&t=271s&ab_channel=SeerStudio%28GrizhlieCodes%29
