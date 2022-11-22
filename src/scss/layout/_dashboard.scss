@@ -26,6 +26,7 @@
 .menu {
   background: $clr-card;
   border-radius: $br-card;
+  overflow: hidden;
   width: 100%;
 
   @include breakpoint(small) {
@@ -80,6 +81,7 @@
 
   &__options {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
     padding: rem(30);
 
