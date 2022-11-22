@@ -1,3 +1,5 @@
+@use "./functions" as *;
+
 // TYPOGRAPHY
 
 $primary-font: "Rubik", sans-serif;
@@ -21,7 +23,7 @@ $clr-self-care: hsl(43, 84%, 65%);
 
 // COMPONENTS STYLES
 
-$br-card: 15px;
+$br-card: rem(15);
 
 $z-index-bottom: 1;
 $z-index-middle: 5;
@@ -29,9 +31,10 @@ $z-index-top: 10;
 
 // FONT SIZES
 
-$fs-btn: 18px;
-$fs-h1: clamp(24px, 24px + 2vw, 38px);
-$fs-h3: clamp(32px, 32px + 2vw, 56px);
+$fs-btn: rem(18);
+$fs-h1: clamp(rem(24), 4vw, rem(38));
+$fs-h2: rem(18);
+$fs-h3: clamp(rem(32), rem(32) + 2vw, rem(56));
 
 // FONT WEIGHTS
 

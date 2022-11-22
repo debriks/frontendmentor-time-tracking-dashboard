@@ -11,8 +11,8 @@ let data = [
         previous: 36,
       },
       monthly: {
-        current: 103,
-        previous: 128,
+        current: 83,
+        previous: 98,
       },
     },
   },
