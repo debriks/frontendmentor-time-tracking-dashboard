@@ -1,0 +1,17 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+body {
+  background-color: $clr-bg-very-dark-blue;
+  color: $clr-txt;
+  font-family: $primary-font;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 80px 20px;
+
+  @include breakpoint(small) {
+    padding: 80px 40px;
+  }
+}

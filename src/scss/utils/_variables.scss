@@ -1,0 +1,42 @@
+// TYPOGRAPHY
+
+$primary-font: "Rubik", sans-serif;
+
+// COLORS
+
+$clr-bg-very-dark-blue: hsl(226, 43%, 10%);
+$clr-main-card: hsl(246, 80%, 60%);
+$clr-card: hsl(235, 46%, 20%);
+$clr-card-hover: hsl(235, 41%, 34%);
+$clr-txt: hsl(0, 0%, 100%);
+$clr-txt-pale-blue: hsl(236, 100%, 87%);
+$clr-txt-inactive-desaturated-blue: hsl(235, 45%, 61%);
+
+$clr-work: hsl(15, 100%, 70%);
+$clr-play: hsl(195, 74%, 62%);
+$clr-study: hsl(348, 100%, 68%);
+$clr-exercise: hsl(145, 58%, 55%);
+$clr-social: hsl(264, 64%, 52%);
+$clr-self-care: hsl(43, 84%, 65%);
+
+// COMPONENTS STYLES
+
+$br-card: 15px;
+
+$z-index-bottom: 1;
+$z-index-middle: 5;
+$z-index-top: 10;
+
+// FONT SIZES
+
+$fs-btn: 18px;
+$fs-h1: clamp(24px, 24px + 2vw, 38px);
+$fs-h3: clamp(32px, 32px + 2vw, 56px);
+
+// FONT WEIGHTS
+
+$fw-light: 300;
+$fw-reg: 400;
+$fw-med: 500;
+$fw-semibold: 600;
+$fw-bold: 700;

@@ -1,0 +1,203 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+.dashboard {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: max-content;
+  justify-items: center;
+  gap: 1.5rem;
+
+  @include breakpoint(small) {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  @include breakpoint(large) {
+    max-width: 1110px;
+  }
+}
+
+.menu {
+  background: $clr-card;
+  border-radius: $br-card;
+  overflow: hidden;
+  width: 100%;
+
+  @include breakpoint(small) {
+    display: flex;
+    flex-flow: column nowrap;
+    grid-row: 1/3;
+  }
+
+  &__user {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-start;
+    background: $clr-main-card;
+    padding: 30px;
+    border-radius: $br-card;
+
+    @include breakpoint(small) {
+      height: 80%;
+      align-items: start;
+    }
+
+    img {
+      width: clamp(64px, 56px + 4vw, 78px);
+      border: 3px solid $clr-txt;
+      border-radius: 50%;
+    }
+
+    &--txt {
+      p {
+        font-size: 14px;
+        color: $clr-txt-pale-blue;
+      }
+
+      h1 {
+        font-size: $fs-h1;
+        line-height: 1;
+        font-weight: 300;
+
+        @include breakpoint(small) {
+          line-height: 1.2;
+        }
+
+        @include breakpoint(large) {
+          padding: 5px 0 50px 0;
+        }
+      }
+    }
+  }
+
+  &__options {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+
+    @include breakpoint(small) {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 32px;
+    }
+
+    @include breakpoint(large) {
+      padding-bottom: 35px;
+    }
+
+    &--btn {
+      color: $clr-txt-inactive-desaturated-blue;
+      font-size: $fs-btn;
+      line-height: 0.5;
+      transition: color 250ms;
+      cursor: pointer;
+    }
+
+    &--btn:is(:hover, .active) {
+      color: $clr-txt;
+    }
+  }
+}
+
+.activity {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 40px);
+  width: 100%;
+  border-radius: 15px;
+
+  @include breakpoint(large) {
+    grid-template-rows: repeat(4, 45px);
+  }
+
+  &__bg {
+    display: grid;
+    place-items: start end;
+    overflow: hidden;
+    border-radius: 15px;
+
+    img {
+      transform: translate(-1rem, -0.7rem);
+    }
+  }
+
+  &__infos {
+    grid-column: 1/2;
+    background: $clr-card;
+    border-radius: 15px;
+    grid-row: 2/6;
+    padding: 30px 22px 22px;
+
+    @include breakpoint(large) {
+      padding: 30px;
+    }
+
+    &--header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h2 {
+        font-weight: $fw-reg;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 0 0;
+
+    @include breakpoint(small) {
+      flex-direction: column;
+      align-items: start;
+    }
+
+    h3 {
+      font-size: $fs-h3;
+      font-weight: $fw-light;
+      padding: 20px 0 10px 0;
+    }
+
+    &--previous {
+      display: flex;
+
+      p {
+        color: $clr-txt-pale-blue;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.work {
+  background: $clr-work;
+}
+
+.play {
+  background: $clr-play;
+}
+
+.study {
+  background: $clr-study;
+}
+
+.exercise {
+  background: $clr-exercise;
+}
+
+.social {
+  background: $clr-social;
+}
+
+.self-care {
+  background: $clr-self-care;
+}
