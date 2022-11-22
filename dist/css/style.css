@@ -128,7 +128,6 @@ body {
 .menu {
   background: hsl(235deg, 46%, 20%);
   border-radius: 0.9375rem;
-  overflow: hidden;
   width: 100%;
 }
 @media (min-width: 40rem) {
